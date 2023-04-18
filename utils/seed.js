@@ -1,6 +1,6 @@
 const connection = require('../config/connection');
 const User = require('../models/User');
-const {getRandomUserName, getRandomEmail } = require('./data');
+const {getRandomName, getRandomUserName, getRandomEmail } = require('./data');
 
 // Start the seeding runtime timer
 console.time('seeding');
@@ -13,18 +13,19 @@ connection.once('open', async () => {
   // Empty arrays for randomly generated users
   const users = [];
 
-  for (let i = 0; i < 10; i++) {
-    const username= getRandomUserName;
+//   for (let i = 0; i < 10; i++) {
+    const username= getRandomUserName();
     const email = getRandomEmail("@gmail.com",15);
+    const friends = getRandomName();
     const newUser = {
       username: username,
-      email: email
+      email: email,
     //   thoughts:
-    //   friends:
+     friends: friends
       
     };
     users.push(newUser);
-  }
+//   }
 
   // Wait for the users to be inserted into the database
   await User.collection.insertMany(users);

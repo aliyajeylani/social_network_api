@@ -26,7 +26,7 @@ const names = [
 
   const thoughts = [
     "Today is a good day",
-    "Have so much homework to do",
+    "I have so much homework to do",
     "What are you doing for the weekend?",
     "Can't believe it's almost summertime",
     "Time for spring cleaning",
@@ -83,6 +83,5 @@ function getRandomEmail(domain,length)
 module.exports = {
     getRandomName,
     getRandomUserName,
-    genRandomIndex,
     getRandomEmail
   };
