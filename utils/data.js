@@ -83,5 +83,6 @@ function getRandomEmail(domain,length)
 module.exports = {
     getRandomName,
     getRandomUserName,
-    getRandomEmail
+    getRandomEmail,
+    getRandomArrItem
   };
