@@ -20,7 +20,7 @@ module.exports = {
   },
   // Update a user
   updateUser(req, res) {
-    User.findOneAndUpdate({ _id: req.params.userId }, { name: req.params.body}, { new: true })
+    User.findOneAndUpdate({ _id: req.params.userId }, { $set: req.body}, { runValidators: true, new: true })
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
@@ -55,8 +55,8 @@ module.exports = {
 addUserFriend(req, res) {
   User.findOneAndUpdate(
     { _id: req.params.userId },
-    { $addToSet: { friends: req.body } },
-    { runValidators: true, new: true }
+    { $addToSet: { friends: req.params.friendId } },
+    { new: true }
   )
     .then((user) =>
       !user
@@ -69,8 +69,8 @@ addUserFriend(req, res) {
 RemoveUserFriend(req, res) {
   User.findOneAndUpdate(
     { _id: req.params.userId },
-    { $pull: { friends: { friendId: req.params.friendId } } },
-    { runValidators: true, new: true }
+    { $pull: { friends: req.params.friendId  } },
+    { new: true }
   )
     .then((user) =>
       !user

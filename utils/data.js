@@ -24,29 +24,7 @@ const names = [
     
   ];
 
-  const thoughts = [
-    "Today is a good day",
-    "I have so much homework to do",
-    "What are you doing for the weekend?",
-    "Can't believe it's almost summertime",
-    "Time for spring cleaning",
-    "Need to go shopping for summer",
-    "Need a car wash ASAP"
-  ]
 
-
-  const reactions = [
-
-    "You got this",
-    "Keep going",
-    "Time for a break",
-    "Good luck",
-    "Do your best",
-    "Scedule time to get it done",
-    "I am down to help",
-    "Way to go!"
-
-  ]
 
 
   // Get a random item given an array
@@ -59,7 +37,6 @@ const getRandomName = () =>
 // Function to generate random names
 const getRandomUserName = () =>
   `${getRandomArrItem(names)}${Math.floor(Math.random() * 10 + 1)}`;
-
 
 //Functions to generate random gmail email
 
@@ -74,7 +51,9 @@ function getRandomEmail(domain,length)
     return text + domain;
 }
 
-
+// Gets a random thoughts
+const getRandomThought = () =>
+  `${getRandomArrItem(thoughts)}`;
 
 
 
@@ -84,5 +63,4 @@ module.exports = {
     getRandomName,
     getRandomUserName,
     getRandomEmail,
-    getRandomArrItem
   };
