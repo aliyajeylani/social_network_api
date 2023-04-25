@@ -1,7 +1,7 @@
-# social_network_api
+# Social Network API
 
 # Description
-  This week's challenge was to build an interactive web application that uses a noSQL database. The goal of this project was to create an API for users and thoughts routes using Mangoose models and MongDB. These frameworks allows us to handle large amounts of data, which is useful for our application. It also allows us to use the CRUD operation to create, update, update and delete data. 
+  This week's challenge was to build an interactive web application that uses a noSQL database. The goal of this project was to create an API for users and thoughts routes using Mangoose models and MongoDB. These frameworks allows us to handle large amounts of data, which is useful for our application. It also allows us to use the CRUD operation to create, read, update and delete data. 
 
   Here's a demo link that demonstrates the functionality of the application: https://drive.google.com/file/d/1efEAlvg3bcuEgWN5wrhQOYBg8bqaoKBI/view?usp=sharing
 
